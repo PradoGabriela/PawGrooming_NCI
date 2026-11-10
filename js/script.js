@@ -7,3 +7,5 @@
       afterWrapper.style.width = `${sliderPos}%`;
     });
  
+
+    

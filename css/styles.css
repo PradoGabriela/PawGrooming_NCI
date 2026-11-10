@@ -163,3 +163,9 @@
       height: 450px;
       background: #71bac6; 
     }
+
+    /*dogs Page Specific Styles*/
+    .img-responsive img{
+      max-width: 300px;
+      height: auto;
+    }
