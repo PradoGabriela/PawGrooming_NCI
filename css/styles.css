@@ -1,3 +1,13 @@
+    /*Global*/
+  .font-heading {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .font-body {
+      font-family: 'DM Sans', sans-serif;
+  }
+
+
 .custom-slide-btn {
       appearance: none;
       box-sizing: border-box;
@@ -66,7 +76,7 @@
       color: #212529;
     }
 
-    .btn.btn-danger.btn-custom-teal {
+    .btn.btn-danger.btn-custom-teal{
       background-color: #71BAC6;
       border-color: #71BAC6;
       color: #ffffff;
@@ -164,8 +174,116 @@
       background: #71bac6; 
     }
 
-    /*dogs Page Specific Styles*/
+    /*DOG PAGES SPECIFIC STYLES*/
     .img-responsive img{
       max-width: 300px;
       height: auto;
+    }
+
+    .dog-service-tabs {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .dog-service-tabs .nav-item {
+      flex: 1 1 0;
+      text-align: center;
+    }
+
+    .dog-service-tabs .nav-link {
+      width: 100%;
+      color: #777b80;
+      background: transparent;
+      border-radius: 0.5rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .dog-service-tabs .nav-link:hover,
+    .dog-service-tabs .nav-link:focus,
+    .dog-service-tabs .nav-link.active {
+      color: #777b80;
+      background: #cce5e2;
+    }
+
+    .dog-service-image {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .dog-service-copy {
+      border: 1px solid #71bac6;
+      border-radius: 1.25rem;
+    }
+
+    .dog-service-description {
+      color: #85888d;
+      line-height: 1.55;
+      text-align: justify;
+    }
+
+    #dog-services {
+      background-color: #ffffff;
+    }
+
+    .additional-services-accent {
+      color: #43808a;
+    }
+
+    .additional-service-icon {
+      width: 3rem;
+      height: 3rem;
+      color: #43808a;
+      border: 1px solid #71bac6;
+      border-radius: 0.75rem;
+      background-color: #f0f9f8;
+      font-size: 1.25rem;
+    }
+
+    /* Gallery Section Animation */
+      .gallery-section.gallery-visible .container {
+        animation: gallery-entrance 0.6s ease-out;
+      }
+
+      .gallery-section a img,
+      .additional-service-icon {
+        transition: transform 0.25s ease, background-color 0.25s ease;
+      }
+
+      .gallery-section a:hover img,
+      .gallery-section a:focus-visible img {
+        transform: scale(1.05);
+      }
+
+      .additional-dog-services .col:hover .additional-service-icon {
+        transform: translateY(-5px);
+        background-color: #cce5e2;
+      }
+
+    @keyframes gallery-entrance {
+      from {
+        opacity: 0.5;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .dog-service-tabs {
+        flex-direction: column;
+      }
+
+      .dog-service-tabs .nav-link {
+        text-align: left;
+      }
+
+      .dog-service-image {
+        height: 420px;
+      }
     }
