@@ -190,18 +190,18 @@
   height: auto;
 }
 
-.dog-service-tabs {
+.dog-service-tabs , .cat-service-tabs {
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
-.dog-service-tabs .nav-item {
+.dog-service-tabs .nav-item , .cat-service-tabs .nav-item {
   flex: 1 1 0;
   text-align: center;
 }
 
-.dog-service-tabs .nav-link {
+.dog-service-tabs .nav-link , .cat-service-tabs .nav-link {
   width: 100%;
   color: #777b80;
   background: transparent;
@@ -211,30 +211,33 @@
 
 .dog-service-tabs .nav-link:hover,
 .dog-service-tabs .nav-link:focus,
-.dog-service-tabs .nav-link.active {
+.dog-service-tabs .nav-link.active,
+.cat-service-tabs .nav-link:hover,
+.cat-service-tabs .nav-link:focus,
+.cat-service-tabs .nav-link.active {
   color: #777b80;
   background: #cce5e2;
 }
 
-.dog-service-image {
+.dog-service-image , .cat-service-image {
   width: 100%;
   height: 560px;
   object-fit: cover;
   object-position: center;
 }
 
-.dog-service-copy {
+.dog-service-copy , .cat-service-copy {
   border: 1px solid #71bac6;
   border-radius: 1.25rem;
 }
 
-.dog-service-description {
+.dog-service-description , .cat-service-description {
   color: #85888d;
   line-height: 1.55;
   text-align: justify;
 }
 
-#dog-services {
+#dog-services, #cat-services {
   background-color: #ffffff;
 }
 
@@ -284,18 +287,21 @@
 }
 
 @media (max-width: 767.98px) {
-  .dog-service-tabs {
+  .dog-service-tabs , .cat-service-tabs {
     flex-direction: column;
   }
 
-  .dog-service-tabs .nav-link {
+  .dog-service-tabs .nav-link , .cat-service-tabs .nav-link {
     text-align: left;
   }
 
-  .dog-service-image {
+  .dog-service-image , .cat-service-image {
     height: 420px;
   }
 }
+
+/*Cats page Style*/
+
 
 /* Contact page */
 .hero-sub {
