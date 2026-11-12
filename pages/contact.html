@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grooming</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-light font-body">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 px-4 sticky-top">
+    <div class="container-fluid position-relative">
+
+      <a class="navbar-brand d-lg-none" href="../index.html">
+        <img src="../images/pawlogo.png" alt="Logo" height="60">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link px-3" href="../index.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="dogs.html">For Dogs</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="cats.html">For Cats</a></li>
+        </ul>
+
+        <a class="navbar-brand position-absolute start-50 translate-middle-x d-none d-lg-block m-0" href="#">
+          <img src="../images/pawlogo.png" alt="Logo" height="160">
+        </a>
+
+        <div class="d-flex align-items-center gap-3 ms-lg-auto mt-3 mt-lg-0">
+          <div class="social-icons d-flex align-items-center gap-3 me-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4 py-lg-5">
+    <div class="row g-4 g-lg-5">
+
+      <div class="col-12 col-lg-7">
+        <h1 class="font-heading h2 fw-bold text-dark">Paw Animal Care on the Map</h1>
+        <p class="hero-sub mb-4">Use Google maps to find our grooming saloon easily.</p>
+
+        <div class="map-wrap">
+          <iframe
+            title="Paw animal care location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <h1 class="font-heading h2 fw-bold text-dark">Paw animal care</h1>
+        <p class="hero-sub mb-4">Have a question? We're always here to help.</p>
+
+        <div class="action-card mb-4">
+          <i class="bi bi-calendar-event big"></i>
+          <h1 class="font-heading h2 fw-bold text-dark"> Book online</h1>
+          <p>Choose your date and book online now.</p>
+          <button type="button" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4" id="bookNow" aria-controls="formSection" aria-expanded="false">Book Now</button>
+        </div>
+
+        <div class="action-card mb-4">
+          <i class="bi bi-telephone big"></i>
+          <h1 class="font-heading h2 fw-bold text-dark">Get in touch</h1>
+          <p>We would love to hear from you.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4" href="tel:+353851234567">
+              <i class="bi bi-telephone me-2"></i>085 123 4567
+            </a>
+            <a class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4" href="mailto:vbdasha@gmail.com">Email Us</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="col-12" id="formSection" aria-labelledby="formTitle">
+        <div class="form-card">
+          <h2 id="formTitle">Book Now</h2>
+          <p class="lead-line">We will reply to your request in no more than 30 minutes.</p>
+
+          <div class="form-inner">
+
+            <form id="enquiryForm" novalidate>
+              <div class="mb-4">
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" autocomplete="name">
+                <div class="invalid-feedback" id="nameError"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="visually-hidden">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email address" autocomplete="email">
+                <div class="invalid-feedback" id="emailError"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="phone" class="visually-hidden">Mobile number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Mobile number" autocomplete="tel">
+                <div class="invalid-feedback" id="phoneError"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="queryType" class="visually-hidden">Is it for a dog or a cat?</label>
+                <select class="form-select" id="queryType">
+                  <option value="">Is it for a dog or a cat?</option>
+                  <option value="Dog">Dog</option>
+                  <option value="Cat">Cat</option>
+                </select>
+                <div class="invalid-feedback" id="queryTypeError"></div>
+              </div>
+
+              
+              <div class="mb-4 d-none" id="dogServices">
+                <p class="fw-bold mb-2">Dog services</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dogService" id="dogService1" value="Service 1" checked>
+                  <label class="form-check-label" for="dogService1">Service 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dogService" id="dogService2" value="Service 2">
+                  <label class="form-check-label" for="dogService2">Service 2</label>
+                </div>
+                <p class="fw-bold mt-3 mb-2">Add-ons</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="dogAddon1" value="Add-on 1">
+                  <label class="form-check-label" for="dogAddon1">Add-on 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="dogAddon2" value="Add-on 2">
+                  <label class="form-check-label" for="dogAddon2">Add-on 2</label>
+                </div>
+              </div>
+
+              
+              <div class="mb-4 d-none" id="catServices">
+                <p class="fw-bold mb-2">Cat services</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="catService" id="catService1" value="Service 1" checked>
+                  <label class="form-check-label" for="catService1">Service 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="catService" id="catService2" value="Service 2">
+                  <label class="form-check-label" for="catService2">Service 2</label>
+                </div>
+                <p class="fw-bold mt-3 mb-2">Add-ons</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="catAddon1" value="Add-on 1">
+                  <label class="form-check-label" for="catAddon1">Add-on 1</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="catAddon2" value="Add-on 2">
+                  <label class="form-check-label" for="catAddon2">Add-on 2</label>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="appointmentDate" class="date-label">Preferred date</label>
+                <input type="date" class="form-control" id="appointmentDate">
+                <div class="invalid-feedback" id="appointmentDateError"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="visually-hidden">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+                <div class="invalid-feedback" id="messageError"></div>
+              </div>
+
+              <div class="text-end">
+                <button type="submit" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Send enquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <dialog id="msgDialog">
+    <p id="dialogText" class="fs-5"></p>
+    <button type="button" class="btn btn-gold" id="closeDialog">Close</button>
+  </dialog>
+
+  <footer class="site-footer bg-dark shadow-sm py-4 text-center mt-auto w-100">
+    <div class="container">
+      <p class="font-body mb-0 text-white">&copy; 2026 Grooming. Ireland.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
