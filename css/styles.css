@@ -365,6 +365,10 @@
   #formSection.show { animation: none; }
 }
 
+.mt-4 {
+  color: #ebca79
+}
+
 .form-card {
   border: 1px solid #71bac6;
   border-radius: 1.25rem;

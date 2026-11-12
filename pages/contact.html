@@ -91,8 +91,7 @@
       <section class="col-12" id="formSection" aria-labelledby="formTitle">
         <div class="form-card">
           <h2 id="formTitle">Book Now</h2>
-          <p class="lead-line">We will reply to your request in no more than 30 minutes.</p>
-
+          
           <div class="form-inner">
 
             <form id="enquiryForm" novalidate>
@@ -125,54 +124,140 @@
               </div>
 
               
-              <div class="mb-4 d-none" id="dogServices">
-                <p class="fw-bold mb-2">Dog services</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="dogService" id="dogService1" value="Service 1" checked>
-                  <label class="form-check-label" for="dogService1">Service 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="dogService" id="dogService2" value="Service 2">
-                  <label class="form-check-label" for="dogService2">Service 2</label>
-                </div>
-                <p class="fw-bold mt-3 mb-2">Add-ons</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="dogAddon1" value="Add-on 1">
-                  <label class="form-check-label" for="dogAddon1">Add-on 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="dogAddon2" value="Add-on 2">
-                  <label class="form-check-label" for="dogAddon2">Add-on 2</label>
-                </div>
-              </div>
+              <!-- DOG SERVICES -->
+<div class="mb-4 d-none" id="dogServices">
+  <label for="dogSize" class="fw-bold mb-2">Dog size</label>
+  <select class="form-select mb-3" id="dogSize">
+    <option value="">Select size</option>
+    <option value="small">Small (up to 10 kg)</option>
+    <option value="medium">Medium (10-25 kg)</option>
+    <option value="large">Large (25-40 kg)</option>
+  </select>
 
-              
-              <div class="mb-4 d-none" id="catServices">
-                <p class="fw-bold mb-2">Cat services</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="catService" id="catService1" value="Service 1" checked>
-                  <label class="form-check-label" for="catService1">Service 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="catService" id="catService2" value="Service 2">
-                  <label class="form-check-label" for="catService2">Service 2</label>
-                </div>
-                <p class="fw-bold mt-3 mb-2">Add-ons</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="catAddon1" value="Add-on 1">
-                  <label class="form-check-label" for="catAddon1">Add-on 1</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="catAddon2" value="Add-on 2">
-                  <label class="form-check-label" for="catAddon2">Add-on 2</label>
-                </div>
-              </div>
+  <p class="fw-bold mb-2">Dog services</p>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="dogService" id="dogService1" value="Bath & blow-dry" data-small="30" data-medium="40" data-large="50" data-giant="60" checked>
+    <label class="form-check-label" for="dogService1">Bath &amp; blow-dry <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="dogService" id="dogService2" value="Full groom" data-small="55" data-medium="65" data-large="80" data-giant="100">
+    <label class="form-check-label" for="dogService2">Full groom (bath, cut, nails, ears) <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="dogService" id="dogService3" value="Hand stripping" data-medium="75" data-large="90" data-giant="110">
+    <label class="form-check-label" for="dogService3">Hand stripping <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="dogService" id="dogService4" value="De-shedding treatment" data-small="50" data-medium="60" data-large="75" data-giant="90">
+    <label class="form-check-label" for="dogService4">De-shedding treatment <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="dogService" id="dogService5" value="Puppy intro groom" data-small="30" data-medium="35" data-large="40" data-giant="45">
+    <label class="form-check-label" for="dogService5">Puppy intro groom <span class="price text-muted"></span></label>
+  </div>
+
+  <p class="fw-bold mt-3 mb-2">Add-ons</p>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="dogAddon1" value="Nail clipping" data-price="10">
+    <label class="form-check-label" for="dogAddon1">Nail clipping <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="dogAddon2" value="Ear cleaning" data-price="8">
+    <label class="form-check-label" for="dogAddon2">Ear cleaning <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="dogAddon3" value="Teeth brushing" data-price="8">
+    <label class="form-check-label" for="dogAddon3">Teeth brushing <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="dogAddon4" value="Flea / medicated shampoo" data-price="12">
+    <label class="form-check-label" for="dogAddon4">Flea / medicated shampoo <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="dogAddon5" value="Paw balm" data-price="8">
+    <label class="form-check-label" for="dogAddon5">Paw balm <span class="price text-muted"></span></label>
+  </div>
+<div class="form-check">
+  <p class="mt-4 mb-0 fw-bold">Estimated total: <span class="est-total">Select a size</span></p>
+  <small class="text-muted">Final price confirmed on the day. Matted coats may carry a surcharge from €20.</small>
+</div>
+</div>
+
+<!-- CAT SERVICES -->
+<div class="mb-4 d-none" id="catServices">
+  <label for="catFur" class="fw-bold mb-2">Fur length</label>
+  <select class="form-select mb-3" id="catFur">
+    <option value="">Select fur length</option>
+    <option value="short">Short hair</option>
+    <option value="medium">Medium hair</option>
+    <option value="long">Long hair</option>
+  </select>
+
+  <p class="fw-bold mb-2">Cat services</p>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="catService" id="catService1" value="Bath & blow-dry" data-short="45" data-medium="55" data-long="65" checked>
+    <label class="form-check-label" for="catService1">Bath &amp; blow-dry <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="catService" id="catService2" value="Full groom" data-short="55" data-medium="65" data-long="80">
+    <label class="form-check-label" for="catService2">Full groom (bath, brush, nails, ears) <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="catService" id="catService3" value="De-shedding treatment" data-short="50" data-medium="60" data-long="70">
+    <label class="form-check-label" for="catService3">De-shedding treatment <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="radio" name="catService" id="catService4" value="Lion cut / sanitary trim" data-medium="60" data-long="75">
+    <label class="form-check-label" for="catService4">Lion cut / sanitary trim <span class="price text-muted"></span></label>
+  </div>
+
+  <p class="fw-bold mt-3 mb-2">Add-ons</p>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="catAddon1" value="Nail clipping" data-price="10">
+    <label class="form-check-label" for="catAddon1">Nail clipping <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="catAddon2" value="Ear cleaning" data-price="8">
+    <label class="form-check-label" for="catAddon2">Ear cleaning <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="catAddon3" value="Teeth brushing" data-price="8">
+    <label class="form-check-label" for="catAddon3">Teeth brushing <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="catAddon4" value="Flea / medicated shampoo" data-price="12">
+    <label class="form-check-label" for="catAddon4">Flea / medicated shampoo <span class="price text-muted"></span></label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input price-item" type="checkbox" id="catAddon5" value="Dematting (per 15 min)" data-price="15">
+    <label class="form-check-label" for="catAddon5">Dematting (per 15 min) <span class="price text-muted"></span></label>
+  </div>
+
+  <p class="mt-4 mb-0 fw-bold">Estimated total: <span class="est-total">Select fur length</span></p>
+  <small class="text-muted">Final price confirmed on the day.</small>
+</div>
 
               <div class="mb-4">
                 <label for="appointmentDate" class="date-label">Preferred date</label>
                 <input type="date" class="form-control" id="appointmentDate">
                 <div class="invalid-feedback" id="appointmentDateError"></div>
               </div>
+
+              <div class="mb-4">
+                 <label for="appointmentTime" class="date-label">Preferred time</label>
+                 <select class="form-select" id="appointmentTime">
+                   <option value="">Select a time</option>
+                   <option value="09:00">9:00 AM</option>
+                   <option value="10:00">10:00 AM</option>
+                   <option value="11:00">11:00 AM</option>
+                   <option value="12:00">12:00 PM</option>
+                   <option value="13:00">1:00 PM</option>
+                   <option value="14:00">2:00 PM</option>
+                   <option value="15:00">3:00 PM</option>
+                   <option value="16:00">4:00 PM</option>
+                 </select>
+                 <div class="invalid-feedback" id="appointmentTimeError"></div>
+               </div>
 
               <div class="mb-4">
                 <label for="message" class="visually-hidden">Message</label>
@@ -193,7 +278,7 @@
 
   <dialog id="msgDialog">
     <p id="dialogText" class="fs-5"></p>
-    <button type="button" class="btn btn-gold" id="closeDialog">Close</button>
+    <button type="button" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4" id="closeDialog">Close</button>
   </dialog>
 
   <footer class="site-footer bg-dark shadow-sm py-4 text-center mt-auto w-100">

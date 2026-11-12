@@ -64,8 +64,71 @@ if (bookBtn && formSection && form) {
     dogServices.classList.toggle('d-none', queryType.value !== 'Dog');
     catServices.classList.toggle('d-none', queryType.value !== 'Cat');
   }
+
   queryType.addEventListener('change', showServices);
-  
+  function setupPricing(boxId, selectId, emptyText) {
+  const box = document.getElementById(boxId);
+  const select = document.getElementById(selectId);
+  const totalEl = box.querySelector('.est-total');
+  const items = box.querySelectorAll('.price-item');
+
+  function update() {
+    const key = select.value;
+    let total = 0;
+
+    items.forEach(item => {
+      const priceEl = item.parentElement.querySelector('.price');
+      const raw = item.dataset.price ?? item.dataset[key];
+      const isRadio = item.type === 'radio';
+
+      if (!key && isRadio) {
+        priceEl.textContent = '';
+        item.disabled = false;
+      } else if (raw === undefined) {
+        priceEl.textContent = '(not available)';
+        item.disabled = true;
+        item.checked = false;
+      } else {
+        priceEl.textContent = '€' + raw;
+        item.disabled = false;
+        if (item.checked) total += Number(raw);
+      }
+    });
+   
+const isDog = document.getElementById('queryType').value === 'Dog';
+const box = document.getElementById(isDog ? 'dogServices' : 'catServices');
+const sizeOrFur = document.getElementById(isDog ? 'dogSize' : 'catFur');
+
+const service = box.querySelector('input[type="radio"]:checked')?.value;
+const addons = Array.from(box.querySelectorAll('input[type="checkbox"]:checked')).map(a => a.value);
+const estimate = box.querySelector('.est-total').textContent;
+
+if ((isDog || document.getElementById('queryType').value === 'Cat') && !sizeOrFur.value) {
+  sizeOrFur.classList.add('is-invalid');
+  isValid = false;
+}
+
+    // If the selected radio was disabled, fall back to the first available one
+    const radios = box.querySelectorAll('input[type="radio"]');
+    if (key && !Array.from(radios).some(r => r.checked)) {
+      const first = Array.from(radios).find(r => !r.disabled);
+      if (first) {
+        first.checked = true;
+        total += Number(first.dataset[key]);
+      }
+    }
+
+    totalEl.textContent = key ? '€' + total : emptyText;
+  }
+
+  select.addEventListener('change', update);
+  items.forEach(item => item.addEventListener('change', update));
+  update();
+}
+
+setupPricing('dogServices', 'dogSize', 'Select a size');
+setupPricing('catServices', 'catFur', 'Select fur length');
+
   //time
   function todayStr() {
     const d = new Date();
@@ -125,7 +188,7 @@ if (bookBtn && formSection && form) {
       .toLocaleDateString('en-IE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     document.getElementById('dialogText').textContent =
       'Thank you, ' + document.getElementById('name').value.trim() +
-      '. We received your request for ' + chosen + ' and will reply within 30 minutes.';
+      '. We received your request for ' + chosen + ' see you then.';
     dialog.showModal();
     form.reset();
     form.querySelectorAll('.is-invalid').forEach((f) => f.classList.remove('is-invalid'));
