@@ -7,6 +7,14 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+.border-color-base{
+  border-color: #71bac6 !important;
+}
+
+.icon-color-base {
+  color: #71bac6 !important;
+}
+
 .custom-slide-btn {
   appearance: none;
   box-sizing: border-box;
