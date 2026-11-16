@@ -192,7 +192,7 @@
   object-position: center;
 }
 
-/* DOG PAGES SPECIFIC STYLES */
+/* DOG PAGES SPECIFIC STYLES  START*/
 .img-responsive img {
   max-width: 300px;
   height: auto;
@@ -294,6 +294,62 @@
   }
 }
 
+#galleryCarousel {
+  background-color: #f0f9f8;
+}
+
+#galleryCarousel .carousel-inner {
+  aspect-ratio: 1 / 1;
+}
+
+#galleryCarousel .carousel-item {
+  height: 100%;
+}
+
+#galleryCarousel .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#galleryCarousel .carousel-control-prev,
+#galleryCarousel .carousel-control-next {
+  width: 12%;
+}
+
+#galleryCarousel .carousel-control-prev-icon,
+#galleryCarousel .carousel-control-next-icon {
+  background-color: rgba(113, 186, 198, 0.7);
+  border-radius: 50%;
+  padding: 12px;
+  width: 50px;
+  height: 50px;
+}
+
+#galleryCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+#galleryCarousel .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #71bac6;
+}
+
+#galleryCarousel .carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+}
+
+#galleryCarousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cce5e2;
+  border: 2px solid #71bac6;
+}
+
+#galleryCarousel .carousel-indicators [data-bs-target].active {
+  background-color: #71bac6;
+  width: 12px;
+  height: 12px;
+}
+
 @media (max-width: 767.98px) {
   .dog-service-tabs , .cat-service-tabs {
     flex-direction: column;
@@ -307,9 +363,7 @@
     height: 420px;
   }
 }
-
-/*Cats page Style*/
-
+/* DOG PAGES SPECIFIC STYLES END*/
 
 /* Contact page */
 .hero-sub {
@@ -373,10 +427,6 @@
 @keyframes reveal {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #formSection.show { animation: none; }
 }
 
 .mt-4 {

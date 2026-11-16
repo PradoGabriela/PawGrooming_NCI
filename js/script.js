@@ -8,8 +8,8 @@
         afterWrapper.style.width = `${sliderPos}%`;
       });
     }
- 
-    //Gallery Animation
+
+    //Gallery Animation when user scroll down
     const gallery = document.querySelector('.gallery-section');
     if (gallery && 'IntersectionObserver' in window) {//Check if the user screen is observing the gallery section
       const galleryObserver = new IntersectionObserver((entries) => {

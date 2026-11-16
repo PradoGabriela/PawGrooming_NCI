@@ -86,7 +86,7 @@
         <div class="tab-pane fade show active" id="small-breed-service" role="tabpanel" aria-labelledby="small-breed-tab" tabindex="0">
           <div class="row align-items-start g-4 g-lg-5">
             <div class="col-lg-6">
-              <img src="../images/img1.jpg" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
+              <img src="../images/dogImg1.webp" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
             </div>
             <div class="col-lg-6">
               <div class="dog-service-copy p-4 p-lg-5">
@@ -125,7 +125,7 @@
         <div class="tab-pane fade" id="medium-breed-service" role="tabpanel" aria-labelledby="medium-breed-tab" tabindex="0">
           <div class="row align-items-start g-4 g-lg-5">
             <div class="col-lg-6">
-              <img src="../images/img1.jpg" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
+              <img src="../images/dogImg16.webp" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
             </div>
             <div class="col-lg-6">
               <div class="dog-service-copy p-4 p-lg-5">
@@ -164,7 +164,7 @@
         <div class="tab-pane fade" id="large-breed-service" role="tabpanel" aria-labelledby="large-breed-tab" tabindex="0">
           <div class="row align-items-start g-4 g-lg-5">
             <div class="col-lg-6">
-              <img src="../images/img1.jpg" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
+              <img src="../images/dogImg6.webp" class="dog-service-image img-fluid rounded-4" alt="A freshly groomed dog">
             </div>
             <div class="col-lg-6">
               <div class="dog-service-copy p-4 p-lg-5">
@@ -254,51 +254,143 @@
         <h2 id="gallery-heading" class="font-heading fw-bold text-dark">Gallery</h2>
         <p class="font-body text-muted mb-0">A glimpse of our furry friends</p>
       </div>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-        <div class="col">
-          <a href="../images/img1.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img1.jpg" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
-          </a>
+      
+      <!-- Carousel only for mobile start--> 
+      <div class="d-md-none mb-5 mt-4">
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+            <div class="carousel-item active">
+              <img src="../images/dogImg2.webp" class="d-block w-100" alt="A small dog sitting on a grooming table" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg3.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg4.webp" class="d-block w-100" alt="Two dogs sitting together" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg5.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg7.webp" class="d-block w-100" alt="Two dogs sitting together" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg8.webp" class="d-block w-100" alt="A small dog sitting on a grooming table" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg9.webp" class="d-block w-100" alt="Two dogs sitting together" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg10.webp" class="d-block w-100" alt="A small dog sitting on a grooming table" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg11.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg12.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg13.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg14.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/dogImg15.webp" class="d-block w-100" alt="A dog being dried with a towel" loading="lazy">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev" aria-label="Previous image">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next" aria-label="Next image">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+          <div class="carousel-indicators mt-3">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+          </div>
         </div>
-        <div class="col">
-          <a href="../images/img2.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img2.jpg" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img3.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img3.jpg" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img2.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img2.jpg" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img3.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img3.jpg" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img1.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img1.jpg" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img3.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img3.jpg" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img1.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img1.jpg" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
-          </a>
-        </div>
-        <div class="col">
-          <a href="../images/img2.jpg" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
-            <img src="../images/img2.jpg" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
-          </a>
+      </div>
+
+      <!-- Desktop Gallery start -->
+      <div class="d-none d-md-block">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+          <div class="col">
+            <a href="../images/dogImg2.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg2.webp" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg3.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg3.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg4.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg4.webp" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg5.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg5.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg7.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg7.webp" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg8.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg8.webp" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg9.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg9.webp" class="w-100 h-100 object-fit-cover" alt="Two dogs sitting together" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg10.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg10.webp" class="w-100 h-100 object-fit-cover" alt="A small dog sitting on a grooming table" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg11.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg11.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg12.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg12.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg13.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg13.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg14.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg14.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
+          <div class="col">
+            <a href="../images/dogImg15.webp" class="ratio ratio-1x1 overflow-hidden rounded-4 shadow-sm">
+              <img src="../images/dogImg15.webp" class="w-100 h-100 object-fit-cover" alt="A dog being dried with a towel" loading="lazy">
+            </a>
+          </div>
         </div>
       </div>
     </div>
