@@ -197,3 +197,71 @@ setupPricing('catServices', 'catFur', 'Select fur length');
 
   document.getElementById('closeDialog').addEventListener('click', () => dialog.close());
 }
+
+//Theme toggle
+//Local storage
+let isDark = localStorage.getItem('theme') === 'dark';
+
+//Bootstrap variables to be changed (background colors and text)
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+const whiteElements = document.querySelectorAll('.bg-white');
+const lightElements = document.querySelectorAll('.bg-light');
+const darkText = document.querySelectorAll('.text-white');
+const dogServiceSection = document.getElementById('dog-services');
+const catServiceSection = document.getElementById('cat-services');
+const headingDark = document.querySelectorAll('.heading-dark');
+
+
+  function toggleTheme() {
+  whiteElements.forEach((element) => {
+    element.classList.toggle('bg-white');
+    element.classList.toggle('bg-dark');
+  });
+
+  lightElements.forEach((element) => {
+    element.classList.toggle('bg-light');
+    element.classList.toggle('bg-secondary');
+  });
+
+ darkText.forEach((element) => {
+  if (!element.classList.contains('footer-text')) {
+    element.classList.toggle('text-white');
+    element.classList.toggle('text-dark');
+  }
+});
+  if (dogServiceSection) {
+  dogServiceSection.classList.toggle('bg-secondary');
+  }
+
+  if (catServiceSection) {
+    catServiceSection.classList.toggle('bg-secondary');
+  }
+
+  headingDark.forEach((element) => {
+    element.classList.toggle('text-dark');
+    element.classList.toggle('text-secondary');
+  });
+
+  }
+
+if (isDark) {
+  toggleTheme();
+}
+
+//Change theme icon dynamically
+function updateThemeIcon() {
+  themeIcon.classList.toggle('bi-moon-stars-fill', !isDark);
+  themeIcon.classList.toggle('bi-sun-fill', isDark);
+  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+updateThemeIcon();
+
+themeToggle.addEventListener('click', () => {
+  toggleTheme();
+  isDark = !isDark;
+  updateThemeIcon();
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
