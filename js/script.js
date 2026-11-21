@@ -231,15 +231,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Theme toggle
+  //Elements to be changed when toggling theme
   let isDark = localStorage.getItem('theme') === 'dark';
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+  const navbarTogglerIcon = document.querySelector('.navbar-toggler-icon');
   const whiteElements = document.querySelectorAll('.bg-white');
   const lightElements = document.querySelectorAll('.bg-light');
   const darkText = document.querySelectorAll('.text-white');
   const dogServiceSection = document.getElementById('dog-services');
   const catServiceSection = document.getElementById('cat-services');
   const headingDark = document.querySelectorAll('.heading-dark');
+  const contactFormCard = document.querySelector('#formSection .form-card');
 
   function toggleTheme() {
     whiteElements.forEach((element) => {
@@ -262,11 +265,15 @@ document.addEventListener("DOMContentLoaded", function () {
       element.classList.toggle('text-dark');
       element.classList.toggle('text-secondary');
     });
+    if (contactFormCard) contactFormCard.classList.toggle('bg-secondary');
   }
 
   if (isDark) toggleTheme();
 
   function updateThemeIcon() {
+    if (navbarTogglerIcon) {
+      navbarTogglerIcon.style.filter = isDark ? 'invert(1)' : '';
+    }
     if (!themeIcon || !themeToggle) return;
     themeIcon.classList.toggle('bi-moon-stars-fill', !isDark);
     themeIcon.classList.toggle('bi-sun-fill', isDark);

@@ -20,7 +20,7 @@
       
     
       <a class="navbar-brand d-lg-none" href="../index.html">
-        <img src="../images/pawlogo.png" alt="Logo" height="60">
+        <img src="../images/pawlogo.png" alt="Paw Grooming logo" height="60">
       </a>
 
     
@@ -39,7 +39,7 @@
 
       
         <a class="navbar-brand position-absolute start-50 translate-middle-x d-none d-lg-block m-0" href="#">
-          <img src="../images/pawlogo.png" alt="Logo" height="160">
+          <img src="../images/pawlogo.png" alt="Paw Grooming logo" height="160">
         </a>
 
         <div class="d-flex align-items-center gap-3 ms-lg-auto mt-3 mt-lg-0">
@@ -59,18 +59,89 @@
   </nav>
 
 
-<section class="embedded-video-section py-5 bg-white">
-  <div class="container py-lg-4 text-center">
-    <div class="mb-5">
-      <h2 class="font-heading fw-bold text-dark heading-dark">Cat Grooming <span class="font-heading fw-semibold mb-2">Video</span></h2>
-      <p class="font-body text-dark mb-0 heading-dark">Watch our professional team in action, providing top-notch grooming for your feline friends.</p>
-    </div>
-    <div class="ratio ratio-16x9">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
 
+  <!-- Cat Services Section Start-->
+  <section id="cat-services">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="font-heading h2 fw-bold text-dark">Cat Grooming Services</h1>
+        <p class="font-body text-muted mb-0">Tailored grooming services for every cat</p>
+      </div>
+
+      <ul class="nav nav-pills cat-service-tabs mb-4" id="catServiceTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link font-heading active text-dark" id="small-breed-tab" data-bs-toggle="pill" data-bs-target="#small-breed-service" type="button" role="tab" aria-controls="small-breed-service" aria-selected="true">
+            <i class="bi bi-scissors fs-6 me-2" aria-hidden="true"></i>No Hair
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link font-heading text-dark" id="medium-breed-tab" data-bs-toggle="pill" data-bs-target="#medium-breed-service" type="button" role="tab" aria-controls="medium-breed-service" aria-selected="false">
+            <i class="bi bi-scissors fs-5 me-2" aria-hidden="true"></i>Short Hair
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link font-heading text-dark" id="large-breed-tab" data-bs-toggle="pill" data-bs-target="#large-breed-service" type="button" role="tab" aria-controls="large-breed-service" aria-selected="false">
+            <i class="bi bi-scissors fs-4 me-2" aria-hidden="true"></i>Long Hair
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="catServiceTabContent">
+        <div class="tab-pane fade show active" id="small-breed-service" role="tabpanel" aria-labelledby="small-breed-tab" tabindex="0">
+          <div class="row align-items-start g-4 g-lg-5">
+            <div class="col-lg-6">
+              <img src="../images/cat1.webp" class="cat-service-image img-fluid rounded-4" alt="A hairless cat sitting for a portrait">
+            </div>
+            <div class="col-lg-6">
+              <div class="cat-service-copy p-4 p-lg-5">
+                <h3 class="font-heading h5 fw-semibold mb-2">No Hair</h3>
+                <p class="font-body cat-service-description mb-3 text-dark">Suitable for hairless cats that need regular skin care to keep their skin clean and healthy.</p>
+                <p class="font-body cat-service-description mb-0 text-dark">Our grooming session focuses on caring for your cat's skin, including a gentle bath to remove excess oils and dirt. The skin is carefully cleaned and dried, with extra attention given to areas such as the face, ears, paws and skin folds. Nail trimming and ear cleaning are also included to help keep your cat comfortable and clean.</p>
+                <p class="font-body text-muted mb-1">From €45</p>
+              </div>
+              <a href="contact.html?type=cat&fur=nohair" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="medium-breed-service" role="tabpanel" aria-labelledby="medium-breed-tab" tabindex="0">
+          <div class="row align-items-start g-4 g-lg-5">
+            <div class="col-lg-6">
+              <img src="../images/catImg5.webp" class="cat-service-image img-fluid rounded-4" alt="A ginger kitten wrapped in a towel">
+            </div>
+            <div class="col-lg-6">
+              <div class="cat-service-copy p-4 p-lg-5">
+                <h3 class="font-heading h5 fw-semibold mb-2 ">Short Hair</h3>
+                <p class="font-body cat-service-description mb-3 text-dark">Suitable for cats with short, smooth coats that need regular cleaning and basic coat care.</p>
+                <p class="font-body cat-service-description mb-0 text-dark ">The grooming session includes a gentle bath, towel drying and brushing to remove loose hair and dirt from the coat. Extra attention is given to cleaning the ears, trimming the nails and checking the paws. Brushing also helps reduce loose hair around the home and keeps the coat looking clean and healthy.</p>
+                <p class="font-body text-muted mb-1">From €55</p>
+              
+              </div>
+              <a href="contact.html?type=cat&fur=short" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="large-breed-service" role="tabpanel" aria-labelledby="large-breed-tab" tabindex="0">
+          <div class="row align-items-start g-4 g-lg-5">
+            <div class="col-lg-6">
+              <img src="../images/catImg6.webp" class="cat-service-image img-fluid rounded-4" alt="A long-haired black cat sitting beside its reflection">
+            </div>
+            <div class="col-lg-6">
+              <div class="cat-service-copy p-4 p-lg-5">
+                <h3 class="font-heading h5 fw-semibold mb-2">Long Hair</h3>
+                <p class="font-body cat-service-description mb-3 text-dark">Suitable for cats with longer, thicker coats that need extra brushing and coat maintenance.</p>
+                <p class="font-body cat-service-description mb-0 text-dark">The grooming session includes a bath, careful drying and a thorough brush-out to remove loose hair and prevent tangles. Extra time is spent checking areas that are more likely to develop knots, such as behind the ears, under the legs, around the belly and near the tail. A small trim can also be provided where needed to keep the coat neat and easier to manage.</p>
+                <p class="font-body text-muted mb-1">From €65</p>
+              </div>
+              <a href="contact.html?type=cat&fur=long" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cat Services Section End-->
 
 
   <!-- Addons Section -->
@@ -116,88 +187,20 @@
   <!-- Addons Section End -->
 
 
-  <!-- Cat Services Section Start-->
-  <section id="cat-services">
-    <div class="container py-5">
-      <div class="text-center mb-5">
-        <h1 class="font-heading h2 fw-bold text-dark">Cat Grooming Services</h1>
-        <p class="font-body text-muted mb-0">Tailored grooming services for every cat</p>
-      </div>
-
-      <ul class="nav nav-pills cat-service-tabs mb-4" id="catServiceTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link font-heading active text-dark" id="small-breed-tab" data-bs-toggle="pill" data-bs-target="#small-breed-service" type="button" role="tab" aria-controls="small-breed-service" aria-selected="true">
-            <i class="bi bi-scissors fs-6 me-2" aria-hidden="true"></i>No Hair
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link font-heading text-dark" id="medium-breed-tab" data-bs-toggle="pill" data-bs-target="#medium-breed-service" type="button" role="tab" aria-controls="medium-breed-service" aria-selected="false">
-            <i class="bi bi-scissors fs-5 me-2" aria-hidden="true"></i>Short Hair
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link font-heading text-dark" id="large-breed-tab" data-bs-toggle="pill" data-bs-target="#large-breed-service" type="button" role="tab" aria-controls="large-breed-service" aria-selected="false">
-            <i class="bi bi-scissors fs-4 me-2" aria-hidden="true"></i>Long Hair
-          </button>
-        </li>
-      </ul>
-
-      <div class="tab-content" id="catServiceTabContent">
-        <div class="tab-pane fade show active" id="small-breed-service" role="tabpanel" aria-labelledby="small-breed-tab" tabindex="0">
-          <div class="row align-items-start g-4 g-lg-5">
-            <div class="col-lg-6">
-              <img src="../images/cat1.webp" class="cat-service-image img-fluid rounded-4" alt="A freshly groomed cat">
-            </div>
-            <div class="col-lg-6">
-              <div class="cat-service-copy p-4 p-lg-5">
-                <h3 class="font-heading h5 fw-semibold mb-2">No Hair</h3>
-                <p class="font-body cat-service-description mb-3 text-dark">Suitable for hairless cats that need regular skin care to keep their skin clean and healthy.</p>
-                <p class="font-body cat-service-description mb-0 text-dark">Our grooming session focuses on caring for your cat's skin, including a gentle bath to remove excess oils and dirt. The skin is carefully cleaned and dried, with extra attention given to areas such as the face, ears, paws and skin folds. Nail trimming and ear cleaning are also included to help keep your cat comfortable and clean.</p>
-                <p class="font-body text-muted mb-1">From €45</p>
-              </div>
-              <a href="contact.html?type=cat&fur=nohair" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="medium-breed-service" role="tabpanel" aria-labelledby="medium-breed-tab" tabindex="0">
-          <div class="row align-items-start g-4 g-lg-5">
-            <div class="col-lg-6">
-              <img src="../images/catImg5.webp" class="cat-service-image img-fluid rounded-4" alt="A freshly groomed cat">
-            </div>
-            <div class="col-lg-6">
-              <div class="cat-service-copy p-4 p-lg-5">
-                <h3 class="font-heading h5 fw-semibold mb-2 ">Short Hair</h3>
-                <p class="font-body cat-service-description mb-3 text-dark">Suitable for cats with short, smooth coats that need regular cleaning and basic coat care.</p>
-                <p class="font-body cat-service-description mb-0 text-dark ">The grooming session includes a gentle bath, towel drying and brushing to remove loose hair and dirt from the coat. Extra attention is given to cleaning the ears, trimming the nails and checking the paws. Brushing also helps reduce loose hair around the home and keeps the coat looking clean and healthy.</p>
-                <p class="font-body text-muted mb-1">From €55</p>
-              
-              </div>
-              <a href="contact.html?type=cat&fur=short" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="large-breed-service" role="tabpanel" aria-labelledby="large-breed-tab" tabindex="0">
-          <div class="row align-items-start g-4 g-lg-5">
-            <div class="col-lg-6">
-              <img src="../images/catImg6.webp" class="cat-service-image img-fluid rounded-4" alt="A freshly groomed cat">
-            </div>
-            <div class="col-lg-6">
-              <div class="cat-service-copy p-4 p-lg-5">
-                <h3 class="font-heading h5 fw-semibold mb-2">Long Hair</h3>
-                <p class="font-body cat-service-description mb-3 text-dark">Suitable for cats with longer, thicker coats that need extra brushing and coat maintenance.</p>
-                <p class="font-body cat-service-description mb-0 text-dark">The grooming session includes a bath, careful drying and a thorough brush-out to remove loose hair and prevent tangles. Extra time is spent checking areas that are more likely to develop knots, such as behind the ears, under the legs, around the belly and near the tail. A small trim can also be provided where needed to keep the coat neat and easier to manage.</p>
-                <p class="font-body text-muted mb-1">From €65</p>
-              </div>
-              <a href="contact.html?type=cat&fur=long" class="btn btn-danger font-heading btn-appointment px-4 py-2 mt-4">Book a session</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="embedded-video-section py-5 bg-white">
+  <div class="container py-lg-4 text-center">
+    <div class="mb-5">
+      <h2 class="font-heading fw-bold text-dark heading-dark">Cat Care <span class="font-heading fw-semibold mb-2">at Home</span></h2>
+      <p class="font-body text-dark mb-0 heading-dark">Watch helpful tips to continue your cat's care at home and keep them comfortable between grooming visits.</p>
     </div>
-  </section>
-  <!-- Cat Services Section End-->
+    <div class="ratio ratio-16x9">
+      <video controls preload="metadata" aria-label="Educational Cat grooming video">
+        <source src="../video/Ultimate_Cat_Grooming.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </div>
+  </div>
+</section>
 
 
   <!--Footer -->
