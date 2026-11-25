@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isDark) toggleTheme();
 
   function updateThemeIcon() {
+    document.body.classList.toggle('dark-theme', isDark);
     if (navbarTogglerIcon) {
       navbarTogglerIcon.style.filter = isDark ? 'invert(1)' : '';
     }
