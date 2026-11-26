@@ -1,3 +1,4 @@
+//Slider
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector('.twentytwenty-slider');
   const afterWrapper = document.querySelector('.image-after-wrapper');
@@ -21,14 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryObserver.observe(gallery);
   } 
      
-  // Contact form elements
-  const bookBtn = document.getElementById('bookNow');
-  const formSection = document.getElementById('formSection');
-  const form = document.getElementById('enquiryForm');
-  const dialog = document.getElementById('msgDialog');
-  const mapFrame = document.querySelector('.map-wrap iframe');
-
   // Google Maps
+  const mapFrame = document.querySelector('.map-wrap iframe');
   const MAP_LINK = 'https://maps.app.goo.gl/HbAgXsN3fq8jej4N8'; 
   const MAP_ADDRESS = 'Paw Animal Care, Unit 1, Racefield Centre, Father Russell Rd, Raheen, Limerick, V94 V528, Ireland';      
 
@@ -40,30 +35,33 @@ document.addEventListener("DOMContentLoaded", function () {
     mapLink.rel = 'noopener';
     mapFrame.closest('.map-wrap').insertAdjacentElement('afterend', mapLink);
   }
-
+   // Contact form elements
+  const bookBtn = document.getElementById('bookNow');
+  const formSection = document.getElementById('formSection');
+  const form = document.getElementById('enquiryForm');
+  const dialog = document.getElementById('msgDialog');
+  // Show form on click of "Book Now" button
   if (bookBtn && formSection && form) {
-
-    // Show form on click of "Book Now" button
     bookBtn.addEventListener('click', () => {
-      formSection.classList.add('show');
-      bookBtn.setAttribute('aria-expanded', 'true');
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => document.getElementById('name').focus({ preventScroll: true }), 400);
+    formSection.classList.add('show');
+    bookBtn.setAttribute('aria-expanded', 'true');
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => document.getElementById('name').focus({ preventScroll: true }), 400);
     });
 
     // Show the dog or cat list elements
-    const queryType = document.getElementById('queryType');
-    const dogServices = document.getElementById('dogServices');
-    const catServices = document.getElementById('catServices');
+  const queryType = document.getElementById('queryType');
+  const dogServices = document.getElementById('dogServices');
+  const catServices = document.getElementById('catServices');
 
     function showServices() {
-      dogServices.classList.toggle('d-none', queryType.value !== 'Dog');
-      catServices.classList.toggle('d-none', queryType.value !== 'Cat');
+    dogServices.classList.toggle('d-none', queryType.value !== 'Dog');
+    catServices.classList.toggle('d-none', queryType.value !== 'Cat');
     }
 
     queryType.addEventListener('change', showServices);
 
-    // Pricing setup function definition
+  // Pricing setup function definition
     function setupPricing(boxId, selectId, emptyText) {
       const box = document.getElementById(boxId);
       const select = document.getElementById(selectId);
@@ -93,12 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        const isDog = queryType.value === 'Dog';
-        const activeBox = document.getElementById(isDog ? 'dogServices' : 'catServices');
-        const sizeOrFur = document.getElementById(isDog ? 'dogSize' : 'catFur');
+    const isDog = queryType.value === 'Dog';
+    const activeBox = document.getElementById(isDog ? 'dogServices' : 'catServices');
+    const sizeOrFur = document.getElementById(isDog ? 'dogSize' : 'catFur');
 
-        // If the selected radio was disabled, fall back to the first available one
-        const radios = activeBox.querySelectorAll('input[type="radio"]');
+      // If the selected radio was disabled, fall back to the first available one
+    const radios = activeBox.querySelectorAll('input[type="radio"]');
         if (key && !Array.from(radios).some(r => r.checked)) {
           const first = Array.from(radios).find(r => !r.disabled);
           if (first) {
@@ -119,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupPricing('dogServices', 'dogSize', 'Select a size');
     setupPricing('catServices', 'catFur', 'Select fur length');
 
-    // Handle URL parameters for direct linking (e.g., ?type=dog&size=medium or ?type=cat&fur=nohair)
+    // Handle URL parameters for direct linking form cats and dogs pages
     const urlParams = new URLSearchParams(window.location.search);
     const petType = urlParams.get('type');
     const categoryParam = urlParams.get('size') || urlParams.get('fur');
